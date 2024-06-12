@@ -1,25 +1,15 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react';
+import CodeEditor from './Components/Editor';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+    <div style={{ width: '100%', height: '100%', overflow: 'auto' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%' }}>
+        <h1>JavaScript Code Editor</h1>
+        <CodeEditor />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
